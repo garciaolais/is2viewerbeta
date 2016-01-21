@@ -43,7 +43,7 @@ public class FragmentLauncher extends FragmentActivity {
                 int x=100;
                 break;
 
-            }
+        }
 
         getSupportFragmentManager().beginTransaction().replace(android.R.id.content, fragment, tag).commit();
     }

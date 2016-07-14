@@ -1,0 +1,43 @@
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "VlImageMetadataVGPB";
+
+message VL_IMAGE_METADATA_VGPB{
+required int32          vlDataWidth=1;
+required int32          vlDataHeight=2;
+required int32          fovImageWidth=3;
+required int32          fovImageHeight=4;
+required int32          fovDataRequired=5;
+required VL_DATA_FORMAT fovDataFormat=6;
+required VL_DATA_FORMAT vlDataFormat=7;
+optional DATA_ORIENT    vlOrientation=8;
+required int32          pipModeAreaWidth=9;
+required int32          pipModeAreaHeight=10;
+required int32          pipModeFOVWindowX=11;
+required int32          pipModeFOVWindowY=12;
+required int32          pipModeFOVWindowWidth=13;
+required int32          pipModeFOVWindowHeight=14;
+required int32          fsModeFOVWindowX=15;
+required int32          fsModeFOVWindowY=16;
+required int32          fsModeFOVWindowWidth=17;
+required int32          fsModeFOVWindowHeight=18;
+}
+
+enum VL_DATA_FORMAT{
+    VL_DATA_FORMAT_INVALID=0;
+    VL_DATA_FORMAT_TOP_DOWN_RGB565=1;
+    VL_DATA_FORMAT_JPEG=2;
+    VL_DATA_FORMAT_TOP_DOWN_ARGB32=3;
+}
+
+enum DATA_ORIENT{
+    DATA_ORIENT_NO_CHANGE=0;
+	DATA_ORIENT_ROTATE_90CW=1;
+	DATA_ORIENT_ROTATE_90CCW=2;
+	DATA_ORIENT_ROTATE_180=3;
+	DATA_ORIENT_FLIP_VERT_ROTATE_90CW=4;
+	DATA_ORIENT_FLIP_VERT_ROTATE_90CCW=5;
+	DATA_ORIENT_FLIP_VERT_ROTATE_180=6;
+	DATA_ORIENT_FLIP_HORZ_ROTATE_90CW=7;
+	DATA_ORIENT_FLIP_HORZ_ROTATE_90CCW=8;
+	DATA_ORIENT_FLIP_HORZ_ROTATE_180=9;
+}

@@ -1,0 +1,14 @@
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "ThermalImageBasicPresentationFlagsVGPB";
+
+message THERMAL_IMAGE_BASIC_PRESENTATION_FLAGS_VGPB{
+ required int32 irAlphaLevel=1;
+ required int32 languageCode=2;
+ required int32 pipMode=3;
+ required bool  showRadiometricAnnotations=4;
+ required int32 presentationTempUnits=5;
+ required bool  showCompass=6;
+ optional bool  showLogo=7;
+}
+ 
+ 

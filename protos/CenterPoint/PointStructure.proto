@@ -1,0 +1,9 @@
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "pointStructure";
+
+message PointStructure{
+ required int32 x=1;
+ required int32 y=2;
+}
+ 
+ 

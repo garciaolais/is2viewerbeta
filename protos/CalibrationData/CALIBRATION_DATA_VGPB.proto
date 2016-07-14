@@ -1,0 +1,31 @@
+import "CALIBRATION_DATE.proto";
+import "CALIBRATION_RANGE_INFO_VGPB.proto";
+
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "CalibrationDataVGPB";
+
+message CALIBRATION_DATA_VGPB{
+ required TI_CALIBRATION_METHOD        ti_calibration_method=1;
+ required CALIBRATION_DATE             calibration_date=2;
+ repeated CALIBRATION_RANGE_INFO_VGPB  calibration_range_info_vgpb=3;
+}
+
+enum TI_CALIBRATION_METHOD{
+   TI_CAL_METHOD_INVALID=-1;
+   TI_CAL_METHOD_RC_THIEDE_20021114=0;
+   TI_CAL_METHOD_RC_THIEDE_20030313=1;
+   TI_CAL_METHOD_RC_THIEDE_20030515=2;
+   TI_CAL_METHOD_RC_THIEDE_20030715=3;
+   TI_CAL_METHOD_RC_LEIGHTON_20070510=4;
+   TI_CAL_METHOD_RC_LEIGHTON_20070808=6;
+   TI_CAL_METHOD_ROMULUS=7;
+   TI_CAL_METHOD_IRISYS=16;
+   TI_CAL_METHOD_NEMESIS_THIRD_ORDER=20090301;
+   TI_CAL_METHOD_NEMESIS_FOURTH_ORDER=20090601;
+   TI_CAL_METHOD_GEMINI_20130306=20130306;
+
+}
+ 
+ 
+ 
+

@@ -1,0 +1,6 @@
+protoc -I=C:\protos\IRImageInfo --java_out=C:\protos\out C:\protos\IRImageInfo\THERMAL_IMAGE_INFO_DATA_VGPB.proto
+
+protoc -I=C:\protos\IRImageInfo --java_out=C:\protos\out C:\protos\IRImageInfo\THERMAL_IMAGE_DATE_TIME.proto
+protoc -I=C:\protos\IRImageInfo --java_out=C:\protos\out C:\protos\IRImageInfo\THERMAL_IMAGE_BASIC_PRESENTATION_FLAGS_VGPB.proto
+protoc -I=C:\protos\IRImageInfo --java_out=C:\protos\out C:\protos\IRImageInfo\IR_PALETTE_DATA_VGPB.proto
+protoc -I=C:\protos\IRImageInfo --java_out=C:\protos\out C:\protos\IRImageInfo\ULTRACONTRAST_CONFIG_ROMULUS.proto

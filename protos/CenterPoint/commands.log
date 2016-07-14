@@ -1,0 +1,4 @@
+protoc -I=C:\protos\CenterPoint --java_out=C:\protos\out C:\protos\CenterPoint\USER_DEFINED_MARKER_POINT.proto
+
+protoc -I=C:\protos\CenterPoint --java_out=C:\protos\out C:\protos\CenterPoint\PointStructure.proto
+protoc -I=C:\protos\CenterPoint --java_out=C:\protos\out C:\protos\CenterPoint\MARKER_COMMON_CHARACTERISTICS.proto

@@ -1,0 +1,10 @@
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "ThermalImageDateTime";
+
+message THERMAL_IMAGE_DATE_TIME{
+ required int32 millisecondsSinceStartOfTheDaY=1;
+ required int32 day=2;
+ required int32 month=3;
+}
+ 
+ 

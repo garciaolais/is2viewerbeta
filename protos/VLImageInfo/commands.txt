@@ -1,0 +1,1 @@
+protoc -I=C:\protos\VLImageInfo --java_out=C:\protos\out C:\protos\VLImageInfo\VL_IMAGE_METADATA_VGPB.proto

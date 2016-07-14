@@ -1,0 +1,4 @@
+protoc -I=C:\protos\CalibrationData --java_out=C:\protos\out C:\protos\CalibrationData\CALIBRATION_DATA_VGPB.proto
+
+protoc -I=C:\protos\CalibrationData --java_out=C:\protos\out C:\protos\CalibrationData\CALIBRATION_RANGE_INFO_VGPB.proto
+protoc -I=C:\protos\CalibrationData --java_out=C:\protos\out C:\protos\CalibrationData\GEMINI_UINVERSE_CURVE_DESCRIPTOR_VGPB.proto

@@ -1,0 +1,12 @@
+
+
+message CALIBRATION_DATE{
+ required int32 calibrationYear4Digits=1;
+ required int32 calibrationMonth=2;
+ required int32 calibrationDay=3;
+ required int32 calibrationRun=4;
+}
+ 
+ 
+ 
+

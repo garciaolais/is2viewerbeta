@@ -1,0 +1,55 @@
+import "THERMAL_IMAGE_DATE_TIME.proto";
+import "THERMAL_IMAGE_BASIC_PRESENTATION_FLAGS_VGPB.proto";
+import "IR_PALETTE_DATA_VGPB.proto";
+
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "ThermalImageInfoDataVGPB";
+
+message THERMAL_IMAGE_INFO_DATA_VGPB{
+ required int32                                        frameindex=1;
+ required int32                                        calRangeIndex=2;
+ required THERMAL_IMAGE_DATE_TIME                      imageDateTime=3;
+ required int32                                        irDataWidth=4;
+ required int32                                        irDataHeight=5;
+ required int32                                        numHeaderRows=6; 
+ required int32                                        numFooterRows=7;
+ required IR_DATA_FORMAT                               irDataFormat=8;
+ required int32                                        irScaleFactor=9;
+ required float                                        capturedEmissivity=10;
+ required float                                        capturedBackgroundTempC=11;
+ required float                                        capturedTransmissionFactor=12;
+ optional THERMAL_IMAGE_BASIC_PRESENTATION_FLAGS_VGPB  basicPresentationFlags=13;
+ optional IR_PALETTE_DATA_VGPB                         irPaletteSetup=14;
+ optional DATA_ORIENT                                  irOrientation=15;
+ optional ENCODING_ENDIANNESS                          irDataEncoding=16;
+ optional bytes                                        irFpaTempC=17;
+ optional bytes                                        compassReading=18;
+ optional bytes                                        distanceReding=19;
+ optional bytes                                        gpsReading=20;
+ optional bytes                                        cameraPaletteScaling=21;
+}
+
+enum IR_DATA_FORMAT{
+    IR_DATA_FORMAT_INVALID=0;
+	IR_DATA_FORMAT_TOP_DOWN_PDATA_U16=1;
+	IR_DATA_FORMAT_TOP_DOWN_FIXEDPOINTTEMPERATURE=2;
+}
+
+enum DATA_ORIENT{
+    DATA_ORIENT_NO_CHANGE=0;
+	DATA_ORIENT_ROTATE_90CW=1;
+	DATA_ORIENT_ROTATE_90CCW=2;
+	DATA_ORIENT_ROTATE_180=3;
+	DATA_ORIENT_FLIP_VERT_ROTATE_90CW=4;
+	DATA_ORIENT_FLIP_VERT_ROTATE_90CCW=5;
+	DATA_ORIENT_FLIP_VERT_ROTATE_180=6;
+	DATA_ORIENT_FLIP_HORZ_ROTATE_90CW=7;
+	DATA_ORIENT_FLIP_HORZ_ROTATE_90CCW=8;
+	DATA_ORIENT_FLIP_HORZ_ROTATE_180=9;
+}
+
+enum ENCODING_ENDIANNESS{
+   T_ENCODING_ENDIANNESS_THERMAL_IMAGER=-1;
+   T_ENCODING_LITTLE_ENDIAN=0;
+   T_ENCODING_BIG_ENDIAN=1;
+} 

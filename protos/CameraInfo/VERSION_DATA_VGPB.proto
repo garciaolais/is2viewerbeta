@@ -1,0 +1,12 @@
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "VersionDataVGPB";
+
+message VERSION_DATA_VGPB {
+ required int32 versionMajor=1;
+ required int32 versionMid=2;
+ required int32 versionMin=3;
+}
+ 
+ 
+ 
+

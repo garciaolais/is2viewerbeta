@@ -1,0 +1,61 @@
+import "CALIBRATION_DATE.proto";
+import "AUDIO_CAPABILITY_DATA_VGPB.proto";
+import "VERSION_DATA_VGPB.proto";
+
+
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "ThermalImagerInfoDataGPB";
+
+message THERMAL_IMAGER_INFO_DATA_GPB {
+ required TI_FAMILY                   cameraFamily=1;
+ required int32                       cameraModelNumber=2;
+ required int32                       cameraCapabilityFlags=3;
+ required int32                       endUserPresentationWidth=4;
+ required int32                       endUserPresentationHeight=5;
+ required ENCODING_ENDIANNESS         thermalImagerEndianness=6;
+ required int32                       thermalImagerThumbnailWidth=7;
+ required int32                       thermalImagerThumbnailHeight=8;
+ required THUMBNAIL_DATA_FORMAT       thermalImagerThumbnailFormat=9; 
+ required int32                       irSensorWidth=10;
+ required int32                       irSensorHeight=11;
+ required int32                       vlSensorWidth=12;
+ required int32                       vlSensorHeight=13;
+ required int32                       minimumCenterBoxWidth=14;
+ required int32                       minimumCenterBoxHeight=15;
+ required int32                       maximumCenterBoxWidth=16;
+ required int32                       maximumCenterBoxHeight=17;
+ required int32                       centerPointPixelIndex=18;
+ required int32                       numCenterPointPixels=19;
+ required CALIBRATION_DATE            cameraCalibrationDate=20;
+ required VERSION_DATA_VGPB           softwareVersion=21;
+ required string                      companyName32Chars=22;
+ required string                      cameraSerialNumber32Chars=23;
+ required string                      irEngineSerialNumber32Chars=24;
+ required AUDIO_CAPABILITY_DATA_VGPB  cameraAudioCapability=25;
+}
+
+enum TI_FAMILY{
+   TI_FAMILY_FELXCAM=0;
+   TI_FAMILY_GLADIATOR=1;
+   TI_FAMILY_NEMESIS=2;
+   TI_FAMILY_ROMULUS=3;
+   TI_FAMILY_IRISYS=4;
+   TI_FAMILY_GEMINI=5;
+ }
+  
+  enum ENCODING_ENDIANNESS{
+   T_ENCODING_ENDIANNESS_THERMAL_IMAGER=-1;
+   T_ENCODING_LITTLE_ENDIAN=0;
+   T_ENCODING_BIG_ENDIAN=1;
+}
+
+enum THUMBNAIL_DATA_FORMAT{
+   THUMBNAIL_DATA_FORMAT_INVALID=0;
+   THUMBNAIL_DATA_FORMAT_TOP_DOWN_RGB565=1;
+   THUMBNAIL_DATA_FORMAT_JPEG=2;
+   THUMBNAIL_DATA_FORMAT_YUV422=3;
+}
+ 
+ 
+ 
+

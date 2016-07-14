@@ -1,0 +1,20 @@
+import "GEMINI_UINVERSE_CURVE_DESCRIPTOR_VGPB.proto";
+
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "CalibrationRangeInfoVGPB";
+
+message CALIBRATION_RANGE_INFO_VGPB{
+ required int32                                   calRangeIndex=1;
+ required int32                                   maxCalRangeIndex=2;
+ required float                                   calRangeMinTempC=3;
+ required float                                   calRangeMaxTempC=4;
+ required float                                   minDisplayableTempC=5;
+ required float                                   maxDisplayableTempC=6;
+ required float                                   minManualPaletteSpanDegreesC=7;
+ required float                                   minAutoPaletteSpanDegreesC=8;
+ repeated GEMINI_UINVERSE_CURVE_DESCRIPTOR_VGPB   geminiUInverseCurves=9;
+}
+ 
+ 
+ 
+

@@ -1,0 +1,14 @@
+import "PointStructure.proto";
+import "MARKER_COMMON_CHARACTERISTICS.proto";
+
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "UserDefinedMarkerRectangle";
+
+
+message USER_DEFINED_MARKER_RECTANGLE{
+ required PointStructure                markerPixelIndexUL=1;
+ required PointStructure                markerPixelIndexLR=2;
+ required MARKER_COMMON_CHARACTERISTICS characteristics=3;
+}
+ 
+ 

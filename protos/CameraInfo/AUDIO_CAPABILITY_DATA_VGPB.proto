@@ -1,0 +1,11 @@
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "AudioCapabilityDataVGPB";
+
+message AUDIO_CAPABILITY_DATA_VGPB {
+ required int32 maxInCameraAudioDurationSecs=1;
+ required int32 audioDataFormat=2;
+}
+ 
+ 
+ 
+

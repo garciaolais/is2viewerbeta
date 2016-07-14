@@ -1,0 +1,78 @@
+import "ULTRACONTRAST_CONFIG_ROMULUS.proto";
+
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "IrPaletteDataVGPB";
+
+message IR_PALETTE_DATA_VGPB{
+ required int32                        paletteSize=1;
+ required PaletteSchemes               paletteScheme=2;
+ required PaletteScaleMode             paletteScaleMode=3;
+ required PaletteSaturationColorChoice paletteSaturationColorsChoice=4;
+ required PaletteModeType              ultraContrastMode=5;
+ required float                        paletteRangeMinTempC=6;
+ required float                        paletteRangeMaxTempC=7;
+ required TEMP_ALARM_MODE              tempAlarmMode=8;
+ required float                        tempAlarmRangeMinTempC=9;
+ required float                        tempAlarmRangeMaxTempC=10;
+ optional bool                         tempAlarmIsothermColorMode=11;
+ optional float                        minManualPaletteSpanTempC=12;
+ optional float                        minAutoPaletteSpanTempC=13;
+ optional int32                        paletteMinSaturationColorRGB32=14;
+ optional int32                        paletteMaxSaturationColorRGB32=15;
+ optional IsothermColorChoice          isothermColorChoice=16;
+ optional int32                        isothermColorRGB=17;
+ optional ULTRACONTRAST_CONFIG_ROMULUS ultracontrastRomulus=18;
+ optional int32                        irDisplayRampThreshold=19;
+ optional int32                        irDisplayRampShift=20;
+}
+
+enum PaletteSchemes{
+    PALSCHEME_GRAYSCALE=0;
+	PALSCHEME_GRAYSCALE_INVERTED=1;
+	PALSCHEME_BLUERED=2;
+	PALSCHEME_HIGHCONTRAST=3;
+	PALSCHEME_HOTMETAL=4;
+	PALSCHEME_IRONBOW=5;
+	PALSCHEME_AMBER=6;
+	PALSCHEME_AMBER_INVERTED=7;
+	PALSCHEME_RAINBOW=8;
+	PALSCHEME_RAINBOW900=9;
+	PALSCHEME_GLOWBOW=10;
+	PALSCHEME_CUSTOM=11;
+	PALSCHEME_HIGH_CONTRAST_VT=12;
+	PALSCHEME_RAINBOW_VT=13;
+	PALSCHEME_IRONBOW_VT=14;
+	PALSCHEME_HOTMETAL_VT=15;
+}
+enum PaletteScaleMode{
+
+   PSM_AUTO=0;
+   PSM_FIX_MAX=1;
+   PSM_FIX_MIN=2;
+   PSM_FIX_BOTH=3;
+} 
+enum PaletteSaturationColorChoice{
+   PSCC_OFF=0;
+   PSCC_STANDARD=1;
+   PSCC_WHITEBLACK=2;
+   PSCC_REDBLUE=3;
+   PSCC_CUSTOM=4;
+} 
+enum PaletteModeType{
+   LINEAR=0;
+   ULTRA_CONTRAST=1;
+} 
+enum TEMP_ALARM_MODE{
+   TEMP_ALARM_DISABLED=0;
+   TEMP_ALARM_ENABLED_ABOVE_MAX_THRESHOLD=1;
+   TEMP_ALARM_ENABLED_BELOW_MIN_THRESHOLD=2;
+   TEMP_ALARM_ENABLED_BETWEEN_MIN_MAX_THRESHOLDS=3;
+   TEMP_ALARM_ENABLED_OUTSIDE_MIN_MAX_THRESHOLDS=4;
+   TEMP_ALARM_ISOTHERM=5;
+}
+enum IsothermColorChoice{
+   ICC_RED=0;
+   ICC_BLACK=1;
+   ICC_WHITE=2;
+   ICC_CUSTOM=3;
+}

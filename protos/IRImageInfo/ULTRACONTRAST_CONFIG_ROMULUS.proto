@@ -1,0 +1,15 @@
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "UltraContrastConfigRomulus";
+
+message ULTRACONTRAST_CONFIG_ROMULUS{
+ required int32 ultraContrastLogLinMixTempMaxMin=1;
+ required int32 ultraContrastLogLinMix=2;
+ required int32 ultraContrastParamA=3;
+ required int32 ultraContrastParamB=4;
+ required int32 ultraContrastSpare1=5;
+ required int32 ultraContrastSpare2=6;
+}
+ 
+ 
+ 
+

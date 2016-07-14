@@ -1,0 +1,14 @@
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "GeminiUniverseCurveDescriptorVGPB";
+
+message GEMINI_UINVERSE_CURVE_DESCRIPTOR_VGPB{
+ required float startTempC=1;
+ required float endTempC=2;
+ required float U0=3;
+ required float U1=4;
+ required float U2=5;
+}
+ 
+ 
+ 
+

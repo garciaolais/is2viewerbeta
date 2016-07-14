@@ -1,0 +1,20 @@
+option java_package = "com.aolais.electroraven.is2viewerbeta.protos";
+option java_outer_classname = "MarkerCommonCharacteristics";
+
+message MARKER_COMMON_CHARACTERISTICS{
+ required string uniqueIDString=1;
+ required string markerName=2;
+ required bool markerEnabledFlag=3;
+ required bool useImageEBT=4;
+ optional float markerTempC_Average=5;
+ optional float markerTempC_Min=6;
+ optional float markerTempC_Max=7;
+ optional float markerEmissivity=8;
+ optional float markerBackgroundTempC=9;
+ optional float markerTransmission=10;
+ optional string presentationSettingsXML=11;
+ optional string annotationsXML=12;
+}
+ 
+ 
+ 
